@@ -1,0 +1,68 @@
+.body {
+	/* background-color: tomato; */
+	background: linear-gradient(to bottom, #1c92d2, #f2fcfe);
+	display: flex;
+	height: 80px;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0px 60px 0px 30px;
+}
+.left {
+	font-weight: 500;
+	font-size: 2.25rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.left div {
+	align-items: center;
+	font-weight: 200;
+	font-size: 0.8rem;
+	margin-top: -16px;
+	margin-left: 22px;
+}
+
+.right {
+	display: flex;
+}
+
+button {
+	padding: 0.8em 1.8em;
+	border: none;
+	position: relative;
+	overflow: hidden;
+	background-color: transparent;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 1rem;
+	z-index: 1;
+	cursor: pointer;
+}
+
+button::before {
+	content: "";
+	width: 0;
+	height: 300%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(45deg);
+	background: #1c92d2;
+	transition: 0.5s ease-in-out;
+	display: block;
+	z-index: -1;
+}
+
+button:hover::before {
+	width: 100%;
+}
+
+button:hover {
+	color: #111;
+}
+
+.right div {
+	margin: 0px 20px;
+}
